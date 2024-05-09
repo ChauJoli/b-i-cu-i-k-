@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quản lý nhà trọ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<link rel="stylesheet" href="projectcss.css">
+		<link rel="shortcut icon" type="image/png" href="logo.jpg"/>
+	</head>
+	<body>
+		<header>
+			<div class="wrapper" >
+				<div class="header">
+					<nav class="container">
+						<div class="logo">
+							<a href="trangchu.html">QUẢN LÝ NHÀ TRỌ</a>
+							<p>PINK HOUSE</p>
+						</div>
+						<ul class="mainmenu">
+							<li><a class="trang chủ" href="trangchu.html">Trang chủ</a></li>
+							<li><a href="danhsachphong.html">Danh sách phòng</a></li>
+							<li><a href="dichvu.html">Dịch Vụ</a></li>
+							<li><a href="dien.html">Điện</a></li>
+							<li><a href="nuoc.html">Nước</a></li>
+							<li><a href="tinhtien.html">Tính tiền</a></li>
+							<li	>
+								<a href="">Báo cáo</a>
+								<ul class="submenu">
+									<li><a href="danhsachkhachdangthuephong.html">Danh sách khách đang thuê phòng</a></li>
+									<li><a href="danhsachkhachnotienphong.html">Danh sách khách nợ tiền phòng</a></li>
+									<li><a href="danhsachkhachsaphethopdong.html">Danh sách khách sắp hết hợp đồng</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			<script>
+				$(document).ready(function(){$('.submenu').parent('li').addClass('haschild');});
+				// Tìm tất cả các li có submenu và thêm vào đó class="haschild"
+			</script>
+			
+			<div>
+				<div class="x_title">
+					<div>
+						<h2 class="x1_title" style="color: #73879C;">Danh sách dịch vụ</h2>
+					</div>
+					<div>
+						<a href="dichvu.xlsx"><button class="buttonexcel" name="button" type="button"> Xuất file excel</button></a>
+					</div>
+				</div>
+
+				<table>
+					<tr>
+						<th>STT</th>
+						<th>Tên</th>
+						<th>Loại dịch vụ</th>
+						<th>Đơn giá(VND)</th>
+						<th></th><!-- nút xóa ở dưới đây --> 
+					</tr>
+					<!-- Đảm bảo rằng mỗi hàng có một nút "Xóa" --> 
+					<tr>
+						<td>1</td>
+						<td>Điện</td>
+						<td>ĐIỆN</td>
+						<td>3,000</td>
+						<td><button class="action-buttons">Xóa</button></td> 
+							<!-- Nút Xóa ở đây --> 				 
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Gửi xe máy</td>
+						<td>KHÁC</td>
+						<td>100,000</td> 				 
+						<td><button class="action-buttons">Xóa</button></td> 
+							<!-- Nút Xóa ở đây --> 				 
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Nước</td>
+						<td>NƯỚC</td>
+						<td>15,000</td> 
+						<td><button class="action-buttons">Xóa</button></td>
+							<!-- Nút Xóa ở đây --> 				 
+					</tr> 
+					<tr> 
+						<td>4</td>
+						<td>Rác</td>
+						<td>KHÁC</td>
+						<td>50,000</td> 				 
+						<td><button class="action-buttons">Xóa</button></td>
+							<!-- Nút Xóa ở đây --> 				 
+					</tr> 
+				</table>
+			</div>

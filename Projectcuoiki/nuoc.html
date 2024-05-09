@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> Quản lý nhà trọ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<link rel="stylesheet" href="projectcss.css">
+		<link rel="shortcut icon" type="image/png" href="logo.jpg"/>
+	</head>
+	<body>
+		<header>
+			<div class="wrapper" >
+				<div class="header">
+					<nav class="container">
+						<div class="logo">
+							<a href="trangchu.html">QUẢN LÝ NHÀ TRỌ</a>
+							<p>PINK HOUSE</p>
+						</div>
+						<ul class="mainmenu">
+							<li><a class="trang chủ" href="trangchu.html">Trang chủ</a></li>
+							<li><a href="danhsachphong.html">Danh sách phòng</a></li>
+							<li><a href="dichvu.html">Dịch Vụ</a></li>
+							<li><a href="dien.html">Điện</a></li>
+							<li><a href="nuoc.html">Nước</a></li>
+							<li><a href="tinhtien.html">Tính tiền</a></li>
+							<li	>
+								<a href="">Báo cáo</a>
+								<ul class="submenu">
+									<li><a href="danhsachkhachdangthuephong.html">Danh sách khách đang thuê phòng</a></li>
+									<li><a href="danhsachkhachnotienphong.html">Danh sách khách nợ tiền phòng</a></li>
+									<li><a href="danhsachkhachsaphethopdong.html">Danh sách khách sắp hết hợp đồng</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			<script>
+				$(document).ready(function(){$('.submenu').parent('li').addClass('haschild');});
+				// Tìm tất cả các li có submenu và thêm vào đó class="haschild"
+			</script>
+		</header>
+
+		<div class="x_title">
+			<div>
+				<h2 class="x1_title" style="color: #73879C;">Chỉ số nước</h2>
+			</div>
+			<div>
+				<a href="nuoc.xlsx"><button class="buttonexcel" name="button" type="button"> Xuất file excel</button></a>
+			</div>
+		</div>
+
+		<div >
+			<div style="padding: 0px 5px 5px 5px ;">
+				<div style="max-width: 1200px;margin: auto;margin-bottom: 20px;">
+					<form style="display:flex; justify-content: space-between;">
+						<div style="display: flex;">                       
+							<label style="padding-right: 3px;">Tháng/năm</label>
+
+							<div>                            
+								<input type="date" id="Tháng/năm" name="Date">
+								<input type="submit" value="Submit">  							
+							</div>
+						</div>																									  
+						
+						<div>                          
+							<label>Kỳ</label> 
+								<select>
+									<option value="-1" selected>Tất cả</option>
+									<option value="1">Kỳ 1</option>
+									<option value="2">Kỳ 2</option>
+									<option value="2">Kỳ 3</option>
+									<option value="2">Kỳ 4</option>
+								</select>
+						</div>
+
+						<div>
+							<label>Nhà</label>                     
+								<select>
+									<option value="-1" selected>Tất cả</option>
+									<option value="1">Tầng 1</option>                                
+								</select>
+						</div>
+
+						<div>
+							<labels>Trạng thái phòng</label> 					   
+								<select>
+									<option value="-1" selected>Tất cả</option>
+									<option value="1">Còn trống</option>
+									<option value="2">Đã cho thuê</option>
+								</select>
+						</div>                  
+					</form>
+				</div>
+
+				<div>
+					<p style="color: #73879C;">
+						<strong style="color: #586b7f; font-weight: bold;">Lưu ý:</strong>
+						<br>
+						- Bạn phải gán dịch vụ thuộc loại nước cho khách thuê trước thì phần chỉ số này mới được tính cho phòng đó khi tính tiền.
+						<br>
+						- Đối với lần đầu tiên sử dụng phần mềm bạn sẽ phải nhập chỉ số cũ và mới cho tháng sử dụng đầu tiên, các tháng tiếp theo phần mềm sẽ tự động lấy chỉ số mới tháng trước làm chỉ số cũ tháng sau.
+                            
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div >
+			<div id="table-wrapper"	class="dataTables-wrapper form-inline dt-bootstrap no-footer">										
+				<div>											
+					<div class="col-sm-12">
+						<table id="table" class="table dataTable table-bordered no-footer" cellspacing="0" width="90%" role="grid" style>
+							<thead>
+								<tr role="row">
+									<!-- tabindex: dùng để chỉ định thứ tự tab của phần tử; -->
+									<th class="disabled"  style="width:15%;">Nhà</th>
+									<th class="disabled"  style="width:15%;">Phòng</th>
+									<th class="disabled"  style="width:15%;">Khách thuê</th>
+									<th class="disabled"  style="width:15%;">CS Nước Cũ</th>
+									<th class="disabled"  style="width:15%;">CS Nước Mới</th>
+									<th class="disabled"  style="width:15%;">Sử Dụng</th>
+									<th style="min-width:40px;width:40px" class="sorting-disabled"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr role="row" class="odd">
+									<td>Tầng 1</td>
+									<td>101</td>
+									<td>Nguyễn Văn A</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%; text-align:right;" name="olaValue" value="0">
+									</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%; text-align:right;"name="newValue" value="0"	>
+									</td>
+									<td class="dt-body-right"style="text-align:right;">0</td>
+									<td>																	
+										<button type="button" class="btn" name="saveRow" title="Lưu">
+											<i class="fa-solid fa-floppy-disk"></i>
+												Lưu
+										</button>
+									</td>
+								</tr>
+								
+								<tr role="row" class="odd">
+									<td>Tầng 1</td>
+									<td>102</td>
+									<td>Trần Thị Mai</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="oldValue" value="0">
+									</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="newValue" value="0">
+									</td>
+									<td class="dt-body-right"style="text-align:right;">0</td>
+									<td>
+										<button type="button" class="btn"name="saveRow" title="Lưu">
+											<i class="fa-solid fa-floppy-disk"></i>
+												Lưu
+										</button>
+									</td>
+								</tr>
+
+								<tr role="row" class="odd">
+									<td>Tầng 1</td>
+									<td>103</td>
+									<td>Hoàng Đức Anh</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="oldValue" value="0">
+									</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="newValue" value="0">
+									</td>
+									<td class="dt-body-right" style="text-align:right;">0</td>
+									<td>
+										<button type="button" class="btn"name="saveRow" title="Lưu">
+											<i class="fa-solid fa-floppy-disk"></i>
+											   Lưu
+										</button>
+									</td>
+								</tr>
+
+								<tr role="row" class="even">
+									<td>Tầng 1</td>
+									<td>104</td>
+									<td>Nguyễn Minh Anh</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="oldValue" value="0">
+									</td>
+									<td style>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="newValue" value="0">
+									</td>
+									<td class="dt-body-right" style="text-align:right;">0</td>
+									<td>
+										<button type="button" class="btn"name="saveRow" title="Lưu">
+											<i class="fa-solid fa-floppy-disk"></i>
+												Lưu
+										</button>
+									</td>
+								</tr>
+								<tr role="row" class="odd">
+									<td>Tầng 1</td>
+									<td>105</td>
+									<td>Nguyễn Thị Dịu</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="oldValue" value="0">
+									</td>
+									<td>
+										<input type="text" class="form-control" style="width:90%;text-align:right;" name="newValue" value="0">
+									</td>
+									<td class="dt-body-right" style="text-align:right;">0</td>
+									<td>
+										<button type="button" class="btn"name="saveRow" title="Lưu">
+											<i class="fa-solid fa-floppy-disk"></i>
+												Lưu
+										</button>
+									</td>
+								</tr>																
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</body>
+</html>
+	

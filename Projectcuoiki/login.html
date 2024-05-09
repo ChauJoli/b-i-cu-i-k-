@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Đăng nhập</title>
+        <link rel="stylesheet" href="projectcss.css">
+        <link rel="shortcut icon" type="image/png" href="logo.jpg"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    </head>
+    <body onload="Checklogin()" id="login">
+        <div id="wrapper">
+            <form action="" id="form-login">
+                <H1 class="form-heading">Đăng nhập</H1>
+                <div class="form-group">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" class="form-input" id="username"placeholder="Tên đăng nhập">
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" class="form-input" id="password" placeholder="Mật khẩu">
+                </div>
+                <button class="form-submit" onclick="login()">Đăng nhập</button>
+            </form>
+        </div>
+        <script>
+            const listAccount = [
+                {
+                    username:"admin1",
+                    password:"pinkhouse1"
+                },
+                {
+                    username:"admin2",
+                    password:"pinkhouse2"
+                }
+            ]
+            let islogin = !!localStorage.getItem("token")
+
+            function Checklogin() {
+                if (islogin){
+                    window.location.href="trangchu.html"
+                }
+            }
+
+            function login(){
+                let username = document.getElementById("username").value
+                let password = document.getElementById("password").value
+                let checklogin = listAccount.some(value => value.username === username && value.password === password)
+                if(checklogin){
+                    localStorage.setItem("token", username)
+                    islogin=true
+                    Checklogin()
+                }
+                else{
+                    alert("Wrong username or password!")
+                }
+            }
+        </script>
+    </body>
+</html>

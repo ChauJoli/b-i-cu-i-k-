@@ -1,0 +1,363 @@
+body{
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*LOGIN*/
+#login{
+	background:url(4250546.jpg);
+	background-size: cover;
+	background-position-y:-80px;
+}
+#wrapper{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;/*căn theo chiều đã chọn*/
+	align-items: center/*căn theo chiều còn lại*/
+}
+#form-login{
+	max-width: 300px;
+	background:rgba(42, 63, 84,0.8);
+	flex-grow: 1;/*do flex bóp lại*/
+	padding: 30px 30px 40px;
+	box-shadow: 0px 0px 10px 4px pink;/*mờ viền*/
+}
+.form-heading{
+	font-size: 35px;
+	color: rgb(207, 226, 243);
+	text-align: center;
+	margin-bottom: 40px ;
+}
+.form-group{
+	border-bottom: 1px solid white ;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	display: flex;
+}
+.form-group i{
+	color: white;
+	font-size: 15px;
+	padding-right: 7px;
+}
+.form-input{
+	background:transparent;
+	border:0;
+	outline:0 ; 
+	color: white;
+	flex-grow: 1;
+}
+.form-input::placeholder{
+	color:white;
+}
+.form-submit{
+	background-color: rgb(54, 139, 189,0.6);
+	border: 1px solid rgb(47, 125, 171);
+	color:white;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 5px 0px;
+	margin-top: 15px;
+}
+.form-submit:hover{
+	background-color: rgb(43, 115, 157,0.9);
+}
+
+/*Menu index*/
+.wrapper{
+	background-color:#2A3F54;
+}
+.container{
+	max-width: 1150px;
+	margin: auto;
+}
+.logo{
+	margin:10px
+}
+.logo a{
+	text-decoration: none;
+	color: white;
+}
+.logo p{
+	color:#FFEAE3;
+	text-align: center;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	justify-items: center;
+}
+
+/*Code phan menu chính*/
+.mainmenu{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.mainmenu li{
+	position: relative;
+}
+.mainmenu li a {
+	color: white;
+	display: block;
+	padding: 30px 20px;
+	text-decoration: none;
+}
+.mainmenu ul.submenu{
+	position: absolute;
+	background-color: #2A3F54;
+	margin-top: 10px;
+	padding: 0px 0px 0px;
+	list-style: none;
+	width: 240px;
+	display: none;
+}
+.mainmenu li:hover ul.submenu{
+	display: block;
+}
+.mainmenu ul.submenu a{
+	padding: 10px 15px;
+	border-bottom: 1px solid #aaabbb;
+}
+.mainmenu ul li:hover{
+	background: #3d5a76;
+
+}
+.mainmenu ul.submenu li:last-child a{
+	border: none;
+}
+
+/*Thiết lập border khi hover*/
+.mainmenu>li>a{
+	position: relative;
+}
+.mainmenu>li>a::before{
+	content: "";
+	height: 4px;
+	width: 100%;
+	background: #FFEAE3;
+	position: absolute;
+	bottom: -10px;
+	left:0px;
+	display: none;
+}
+.mainmenu>li:hover>a::before{
+	display: block;
+}
+.mainmenu>li.haschild::after{
+	font: var(--fa-font-solid);
+	content: '\f107';
+	color:white;
+	position: absolute;
+	top:0px;
+	right: 0px;
+	padding: 32px 0px;
+}
+
+
+/* Trang chủ */
+#design{
+	border-radius: 50px;/*bo góc*/
+	background:#FFB1B1;
+	margin-top: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.banner{
+	font-size:20px;
+	display: block;
+}
+.box{
+	max-width: 1220px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.inner-banner{
+	padding-bottom: 40px;
+	padding-top: 50px;
+}
+.row{
+	display: flex;
+}
+.block1{
+	text-align: center;
+	display: flex;
+}
+.inner-slider{
+	padding-top: 50px;
+}
+.title{
+	font-weight: 700;/*độ đậm cho chữ*/
+	color:#2A3F54
+}
+.title2{
+	padding: 10px 40px;
+	animation: typing 3s steps(40) infinite;
+	white-space: nowrap;/* xác định khoảng trắng có bên trong thành phần được xử lý như thế nào*/
+	overflow: hidden;/*để ẩn nội dung bị tràn. Khi sử dụng thuộc tính này, nội dung sẽ bị ẩn đi và không thể xem được.*/
+}
+@keyframes typing {
+	0%{width: 0%;}
+	100%{width: 80%;}
+}
+
+/*footer*/
+.footer{
+	margin-top: 9%;
+	float:left;
+	width: 100%;
+	background-color: #2A3F54;
+	color: #ccc;
+	min-height:150px
+}
+.part1{
+	float: left;/*xác định sự trôi nổi của thành phần.*/
+	width: 100%;
+	margin-bottom: 20px;
+}
+.boxcenter{
+	width: 70%;
+	margin:0 auto
+}
+.boxfooter1, .boxfooter2{
+	width: 18%;
+	float: left;
+	margin-right: 2%;
+}
+.boxfooter3{
+	width: 60%;
+	float: left;
+}
+.facebook{
+	text-decoration: none;
+	color: #ccc;
+}
+.facebook:hover{
+	color:lightslategray
+}
+.textcenter{
+	text-align: center;
+}
+.icon{
+	margin:0px 28px
+}
+i{
+	margin-right: 10%;
+}
+
+/* danh sach phòng */
+.room{
+	display: flex;
+}
+#design1{
+	border-radius: 50px;/*bo góc*/
+	background:#FFB1B1;
+	margin-top: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.banner1{
+	font-size:20px;
+	display: block;
+}
+.box1{
+	max-width: 1220px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.inner-banner1{
+	padding-bottom: 40px;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+.row1{
+	display: flex;
+}
+.block2{
+	display: flex;
+}
+.inner-slider1{
+	
+}
+.title1 {
+	font-weight: 700;/*độ đậm cho chữ*/
+	color:#2A3F54
+}
+/*dịch vụ*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+tr{
+	color: #586b7f;
+}
+table, th, td {
+	border: 1px solid black;
+}
+th, td {
+	padding: 8px; /* Thêm đệm cho nội dung trong ô */ 
+	text-align: center; /* Căn giữa nội dung trong thẻ th và td */
+}
+table {
+	background-color: #f2f2f2; /* Màu xám trắng */
+}
+.action-buttons {
+	background-color: red;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px; 
+	margin: 4px 2px; 
+	cursor: pointer;
+	border: 1px solid rgb(174, 28, 28);
+	border-radius: 8px;
+} 
+/* Điện */
+.btn{
+	border: 1px solid #1f2e3e;
+	border-radius: 7px;
+	background-color: rgb(49, 120, 196);
+	color: white;
+}
+
+/* Nước */
+.c2{
+	margin-top: 10px;
+	padding-right: 6px;
+
+}
+/*danh sach khách đang thuê phòng*/
+.x_title {
+	display: flex;
+	justify-content: space-between;
+	padding: 1px 5px 10px;
+    border-bottom: 5px solid #E6E9ED;
+    margin-bottom: 20px;
+}
+.x1_title{
+	margin: 20px;
+}
+.buttonexcel{
+	background-color:rgb(15, 127, 48);
+	border:1px solid #2e6da4;
+	border-radius: 15px;
+	color: #fff;
+	margin-right: 80px;
+	margin-top: 25px;
+	font-size: 100%;
+	
+}
+
+/*danh sách khách sap het họp đồng*/
+#hopdong{
+	display: flex;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}

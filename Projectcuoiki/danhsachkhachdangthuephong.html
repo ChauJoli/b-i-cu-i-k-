@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quản lý nhà trọ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<link rel="stylesheet" href="projectcss.css">
+		<link rel="shortcut icon" type="image/png" href="logo.jpg"/>
+	</head>
+	<body>
+		<header>
+			<div class="wrapper" >
+				<div class="header">
+					<nav class="container">
+						<div class="logo">
+							<a href="trangchu.html">QUẢN LÝ NHÀ TRỌ</a>
+							<p>PINK HOUSE</p>
+						</div>
+						<ul class="mainmenu">
+							<li><a class="trang chủ" href="trangchu.html">Trang chủ</a></li>
+							<li><a href="danhsachphong.html">Danh sách phòng</a></li>
+							<li><a href="dichvu.html">Dịch Vụ</a></li>
+							<li><a href="dien.html">Điện</a></li>
+							<li><a href="nuoc.html">Nước</a></li>
+							<li><a href="tinhtien.html">Tính tiền</a></li>
+							<li	>
+								<a href="">Báo cáo</a>
+								<ul class="submenu">
+									<li><a href="danhsachkhachdangthuephong.html">Danh sách khách đang thuê phòng</a></li>
+									<li><a href="danhsachkhachnotienphong.html">Danh sách khách nợ tiền phòng</a></li>
+									<li><a href="danhsachkhachsaphethopdong.html">Danh sách khách sắp hết hợp đồng</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			<script>
+				$(document).ready(function(){$('.submenu').parent('li').addClass('haschild');});
+				// Tìm tất cả các li có submenu và thêm vào đó class="haschild"
+			</script>
+		</header>
+
+
+        <div>
+            <div class="x_title">
+                <div>
+                    <h2 class="x1_title" style="color:#586b7f;">Danh sách khách đang thuê phòng</h2>
+                </div>
+                <div>
+                    <a href="danhsachkhachdangthuephong.xlsx"><button class="buttonexcel" name="button" type="button"> Xuất file excel</button></a>
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Họ tên khách</th>
+                    <th>Điện thoại</th>
+                    <th>Nhà</th>
+                    <th>Thuê phòng</th>
+                    <th>Thuê ngày</th>
+                    <th>Tiền nhà(VND)</th>
+                    <th>Dịch vụ(VND)</th>
+                    <th>Tổng tiền(VND)</th>
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>0597365483</td>
+                    <td>Hà Nội</td>
+                    <td>101</td>
+                    <td>14/2/2023</td>
+                    <td>2,500,000</td> 
+                    <td>400,000</td> 
+                    <td>2,900,000</td>              				 
+                </tr>
+                <tr>
+                    <td>Trần Thị Mai</td>
+                    <td>0567238941</td>
+                    <td>Hải dương</td>
+                    <td>102</td> 				 
+                    <td>14/5/2021</td> 
+                    <td>2,500,000</td>
+                    <td>350,000</td>
+                    <td>2,850,000</td>
+                </tr>
+                <tr>
+                    <td>Hoàng Đức Anh</td>
+                    <td>0897531642</td>
+                    <td>Nghệ An</td>
+                    <td>103</td> 
+                    <td>2/2/2024</td> 
+                    <td>2,500,000</td>
+                    <td>410,000</td>
+                    <td>2,910,000</td>
+                </tr> 
+                <tr> 
+                    <td>Nguyễn Minh Anh</td>
+                    <td>0359468722</td>
+                    <td>Bình Định</td>
+                    <td>104</td> 				 
+                    <td>7/6/2022</td>
+                    <td>2,500,000</td>
+                    <td>353,000</td>
+                 <td>2,853,000</td> 				 
+                </tr> 
+                <tr> 
+                    <td>Nguyễn Thị Dịu</td>
+                    <td>0458369137</td>
+                    <td>Hà Nội</td>
+                    <td>105</td> 				 
+                    <td>10/6/2023</td>
+                    <td>2,500,000</td>
+                    <td>450,000</td>
+                    <td>2,950,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Trần Văn Minh</td>
+                    <td>0856972346</td>
+                    <td>Hà Nam</td>
+                    <td>201</td> 				 
+                    <td>13/6/2021</td>
+                    <td>2,500,000</td>
+                    <td>295,000</td>
+                    <td>2,795,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Hoàng Thị Lan</td>
+                    <td>0258976342</td>
+                    <td>Bắc Ninh</td>
+                    <td>202</td> 				 
+                    <td>20/9/2023</td>
+                    <td>2,500,000</td>
+                    <td>512,000</td>
+                    <td>3,012,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Nguyễn Việt Anh</td>
+                    <td>0689572346</td>
+                    <td>Hà Tĩnh</td>
+                    <td>203</td> 				 
+                    <td>20/8/2020</td>
+                    <td>2,500,000</td>
+                    <td>344,000</td>
+                    <td>2,844,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Quế Văn An</td>
+                    <td>0678914325</td>
+                    <td>Thái Bình</td>
+                    <td>204</td> 				 
+                    <td>4/4/2021</td>
+                    <td>2,500,000</td>
+                    <td>510,000</td>
+                    <td>3,010,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Triệu Hoàng Nga</td>
+                    <td>0348597621</td>
+                    <td>Quảng Bình</td>
+                    <td>205</td> 				 
+                    <td>19/9/2023</td>
+                    <td>2,500,000</td>
+                    <td>412,000</td>
+                    <td>2,912,000</td> 	
+                </tr> 
+                <tr> 
+                    <td>Ngô Văn Hưng</td>
+                    <td>0389712654</td>
+                    <td>Hưng Yên</td>
+                    <td>301</td> 				 
+                    <td>20/1/2023</td>
+                    <td>2,500,000</td>
+                    <td>520,000</td>
+                    <td>3,020,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Trần Văn Bảo</td>
+                    <td>0278934651</td>
+                    <td>Thanh Hóa</td>
+                    <td>302</td> 				 
+                    <td>25/2/2023</td>
+                    <td>2,500,000</td>
+                    <td>400,000</td>
+                    <td>2,900,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Vũ Văn B </td>
+                    <td>0647892163</td>
+                    <td>Nam Định</td>
+                    <td>303</td> 				 
+                    <td>4/3/2020</td>
+                    <td>2,500,000</td>
+                    <td>312,000</td>
+                    <td>2,812,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Hoàng Thanh Ngọc</td>
+                    <td>0198736425</td>
+                    <td>Vĩnh Phúc</td>
+                    <td>304</td> 				 
+                    <td>20/11/2023</td>
+                    <td>2,500,000</td>
+                    <td>515,000</td>
+                    <td>3,015,000</td> 	
+                </tr>
+                <tr> 
+                    <td>Trần Văn Quang</td>
+                    <td>0289345671</td>
+                    <td>Hà Nội</td>
+                    <td>305</td> 				 
+                    <td>12/12/2020</td>
+                    <td>2,500,000</td>
+                    <td>500,000</td>
+                    <td>3,000,000</td> 	
+                </tr>
+                
+           </table>
+        </div>

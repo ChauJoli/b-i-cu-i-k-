@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quản lý nhà trọ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<link rel="stylesheet" href="projectcss.css">
+		<link rel="shortcut icon" type="image/png" href="logo.jpg"/>
+	</head>
+
+	<body>
+
+		<header>
+			<div class="wrapper" >
+				<div class="header">
+					<nav class="container">
+						<div class="logo">
+							<a href="trangchu.html">QUẢN LÝ NHÀ TRỌ</a>
+							<p>PINK HOUSE</p>
+						</div>
+						<ul class="mainmenu">
+							<li><a class="trang chủ" href="trangchu.html">Trang chủ</a></li>
+							<li><a href="danhsachphong.html">Danh sách phòng</a></li>
+							<li><a href="dichvu.html">Dịch Vụ</a></li>
+							<li><a href="dien.html">Điện</a></li>
+							<li><a href="nuoc.html">Nước</a></li>
+							<li><a href="tinhtien.html">Tính tiền</a></li>
+							<li	>
+								<a href="">Báo cáo</a>
+								<ul class="submenu">
+									<li><a href="danhsachkhachdangthuephong.html">Danh sách khách đang thuê phòng</a></li>
+									<li><a href="danhsachkhachnotienphong.html">Danh sách khách nợ tiền phòng</a></li>
+									<li><a href="danhsachkhachsaphethopdong.html">Danh sách khách sắp hết hợp đồng</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			<script>
+				$(document).ready(function(){$('.submenu').parent('li').addClass('haschild');});
+				// Tìm tất cả các li có submenu và thêm vào đó class="haschild"
+			</script>
+		</header>
+
+		<div class="x_title1">
+			<div>
+				<h2 class="x1_title1" style="color: #73879C;">Danh sách phòng</h2>
+			</div>
+		</div>
+
+		<form style="display:flex; justify-content: space-between; max-width: 1400px; margin: auto;">
+			<div>
+				<div style="width: 100%;">
+					<label> Trạng thái phí</label><!-- định nghĩa nhãn cho thành phần -->
+					<select>
+						<option value="-1" > - Trạng thái phòng - </option>
+						<option value="1">Còn trống</option>
+						<option value="2">Đã cho thuê</option>
+					</select>
+				</div>
+			</div>
+
+			<div>
+				<div style="width: 100%;">
+					<label> Trạng thái phí</label>
+					<select>
+						<option value="-1" >Tất cả</option>
+						<option value="1">Chưa nộp</option>
+					</select>
+				</div>
+			</div>
+
+			<div style="display: flex;">
+				<div style="margin-top:6px; margin-right: 6px;">
+					<input type="text" placeholder="Phòng"><!-- được sử dụng cho người dùng nhập hay chọn thông tin. -->
+				</div>             
+				<div class="col-md-1 col-sm-1 col-xs-12">
+					<button><i class="fa fa-search"></i> Tìm kiếm</button>
+				</div>                
+			</div> 
+		</form>
+
+		<div>
+			<div  id="design1">
+				<section class="banner1">
+					<div class="block2">
+						<div class="inner-banner1">
+							<div class="row1">
+								<div>
+									<img  style="width: 200px; height: 200px;" src="p401.jpg"alt=" ">
+								</div>
+								<div class="book1">
+									<div class="inner-slider1">
+										<h1 class="title1"> Phòng 401</h1>
+										<p>Diện tích: 30m<sup>2</sup></p>
+										<p>Số người:1-3</p>
+										<p>Tình trạng: Còn trống</p>
+										<p>Mô tả: Đầy đủ nội thất chỉ việc vào ở, gần đại học Kinh doanh và công nghệ,.. khóa cửa có vân tay, giờ giấc thoải mái, không chung chủ</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div  id="design1">
+				<section class="banner1">
+					<div class="block2">
+						<div class="inner-banner1">
+							<div class="row1">
+								<div>
+									<img  style="width: 200px; height: 200px;" src="402.jpg"alt=" ">
+								</div>
+								<div class="book1">
+									<div class="inner-slider1">
+										<h1 class="title1"> Phòng 404</h1>
+										<p>Diện tích: 30m<sup>2</sup></p>
+										<p>Số người:1-3</p>
+										<p>Tình trạng: Còn trống</p>
+										<p>Mô tả: Đầy đủ nội thất chỉ việc vào ở, gần đại học Kinh doanh và công nghệ,.. khóa cửa có vân tay, giờ giấc thoải mái, không chung chủ</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div  id="design1">
+				<section class="banner1">
+					<div class="block2">
+						<div class="inner-banner1">
+							<div class="row1">
+								<div>
+									<img  style="width: 200px; height: 200px;" src="p403.jpg"alt=" ">
+								</div>
+								<div class="book1">
+									<div class="inner-slider1">
+										<h1 class="title1"> Phòng 403</h1>
+										<p>Diện tích: 30m<sup>2</sup></p>
+										<p>Số người:1-3</p>
+										<p>Tình trạng: Còn trống</p>
+										<p>Mô tả: Đầy đủ nội thất chỉ việc vào ở, gần đại học Kinh doanh và công nghệ,.. khóa cửa có vân tay, giờ giấc thoải mái, không chung chủ</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div  id="design1">
+				<section class="banner1">
+					<div class="block2">
+						<div class="inner-banner1">
+							<div class="row1">
+								<div>
+									<img  style="width: 200px; height: 200px;" src="404.jpg"alt=" ">
+								</div>
+								<div class="book1">
+									<div class="inner-slider1">
+										<h1 class="title1"> Phòng 404</h1>
+										<p>Diện tích: 30m<sup>2</sup></p>
+										<p>Số người:1-3</p>
+										<p>Tình trạng: Còn trống</p>
+										<p>Mô tả: Đầy đủ nội thất chỉ việc vào ở, gần đại học Kinh doanh và công nghệ,.. khóa cửa có vân tay, giờ giấc thoải mái, không chung chủ</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div  id="design1">
+				<section class="banner1">
+					<div class="block2">
+						<div class="inner-banner1">
+							<div class="row1">
+								<div>
+									<img  style="width: 200px; height: 200px;" src="p405.jpg"alt=" ">
+								</div>
+								<div class="book1">
+									<div class="inner-slider1">
+										<h1 class="title1"> Phòng 405</h1>
+										<p>Diện tích: 20m<sup>2</sup></p>
+										<p>Số người:1-3</p>
+										<p>Tình trạng: Còn trống</p>
+										<p>Mô tả: Đầy đủ nội thất chỉ việc vào ở, gần đại học Kinh doanh và công nghệ,.. khóa cửa có vân tay, giờ giấc thoải mái, không chung chủ</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+				
+
+	</body>
+</html>
